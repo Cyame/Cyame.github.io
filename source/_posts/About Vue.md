@@ -1,3 +1,7 @@
+---
+title: Vue Learning Note
+tags: Programming, 编程, frontend, 前端
+---
 # Vue LearningNote
 
 ## Basic
@@ -16,3 +20,7 @@
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 as command in the project's root path.
+
+### ESlint
+
+- Sometimes, ESlint could be annoying. The way to shut it down is to change the option of `useEslint` in file `/config/index.js`. But most time, we should initial the grammar check to make sure our codes are under good condition and standard.
