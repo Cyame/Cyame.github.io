@@ -1,6 +1,7 @@
 ---
 title: Vue Learning Note
-tags: Programming, 编程, frontend, 前端
+date: 2020-07-04 0:00:00
+tags: Programming | 编程 | frontend | 前端
 ---
 # Vue LearningNote
 

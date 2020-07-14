@@ -1,3 +1,9 @@
+---
+title: ASS Override Tags | Aegisub特效标签
+date: 2020-07-14 23:00:00
+tags: Subtitle | 字幕组 | 时轴 | Programming | 编程
+---
+
 # Aegisub Override Tags | Aegisub特效标签
 
 ## General 综述
@@ -38,7 +44,7 @@ B --> |+/A special kind of|C[Override Tags]
 C --> |Override|B
 ```
 
-
+<img src="./img/3-layer-en.png" style="zoom:50%;" />
 
 ### Break 空白
 
