@@ -1,16 +1,24 @@
 ---
 title: ASS Override Tags | Aegisub特效标签
 date: 2020-07-14 23:00:00
-tags: Subtitle | 字幕组 | 时轴 | Programming | 编程
+categories:
+- Subtitle
+- 字幕组
+tags: 
+- Subtitle
+- 字幕组
+- 时轴
+- Programming
+- 编程
 ---
 
 # Aegisub Override Tags | Aegisub特效标签
 
-## General 综述
+## Preface 前言
 
-### Preface 前言
+### About Documentation 关于本文档
 
-It's a personal edition of Aegisub Override Tags Documentation. This document is good for **amateur** and **experienced**, and also detailed enough for novice to build a comprehension to the tags. Also, if you are an expert, the documents will also have a great help in understanding **why** it is so. So you won't have to spend so many time in debugging or reviewing the official documents everytime you use them.
+It's a personal edition of Aegisub Override Tags Documentation. This document is helpful to **amateur** and **experienced**, and also detailed enough for novice to build a comprehension to the tags. Also, if you are an expert, the documents will also have a great help in understanding **why** it is so. So you won't have to spend so many time in debugging or reviewing the official documents everytime you use them.
 
 Before you read, I'd like to state that the tag is highly associated with computer programming, though it's possible to be used without any programming skills.
 
@@ -18,11 +26,13 @@ Before you read, I'd like to state that the tag is highly associated with comput
 - If you are a programmer or **have some basic knowlege in programming**, it will be easy for you to understand. So you only need to take a quick look of this document and use the [API]() once you need to have a look-up.
 - If you are an **experienced subtitle producer** with little understanding in programming area, congratulations! This tutorial is tailored for you! Or if you are already an **expert** in Aegisub and want to sharpen your comprehension, this tutorial will also leave a benefit for you.
 
-In conclusion, this documentation is customized for those who **have basic knowledge of Aegisub**, and interest in **learning more about tags and related programming theories**.
+Thus, though I will include some tables like API as well, the introduction will be with some comprehensive samples and combining skills. So please make sure you already have a basic knowledge of Aegisub and those tags before your reading, which would give you a better experience.
+
+In conclusion, this documentation is focused on theoric comprehension, customized for those who **have basic knowledge of Aegisub**, and interest in **learning more about tags and related programming theories**.
 
 ---
 
-这是一篇个人版Aegisub特效标签文档。本文档适合于**爱好者**和**熟练使用者**阅读，并且内含了大量详细说明以供初学者对标签有一个更好的理解。当然，如果你已经非常熟悉Aegisub，这篇文档也能帮你理解(一些写法和现象)**为什么**会是这样。这样你在每次使用时就不必花费大量时间来进行调试和翻阅文档。
+这是一篇个人版Aegisub特效标签文档。本文档适合于**爱好者**和**熟练使用者**阅读，并且内含了大量详细说明以便初学者对标签有一个更好的理解。当然，如果你已经非常熟悉Aegisub，这篇文档也能帮你理解(一些写法和现象)**为什么**会是这样。这样你在每次使用时就不必花费大量时间来进行调试和翻阅文档。
 
 在阅读之前，我想先声明特效标签与编程是密切相关的，即便不需要编程基础也能正常使用。
 
@@ -30,7 +40,16 @@ In conclusion, this documentation is customized for those who **have basic knowl
 - 如果你是一位程序工程师或者**有一定的编程知识**，那么你会非常快地理解本文档内容。因此你可以快速阅读本文档，之后查阅[API文档]()即可。
 - 如果你是一位使用Aegisub非常熟练的**轴Man**，但你对于相关编程知识不甚了解。那么恭喜你！本文档就是为你量身定做的！或者如果你已经是一位**老轴师**并想加深自己对Aegisub的理解，这篇文档一样对你会有帮助。
 
-总之，本文档的适合**对Aegisub有基本了解**，并**对特效标签及相关编程知识感兴趣**的使用者阅读。
+因此，虽然我也会包含一些API表格，但本文档中会有很多易于理解的实例和组合使用技巧。因此请确保自己对Aegisub有基础的了解以获得更好的阅读体验。
+
+总之，本文档专注于概念理解。适合**对Aegisub有基本了解**，并**对特效标签及相关编程知识感兴趣**的使用者阅读。
+
+### About Notation 关于注记
+
+- 本文使用中英双语编写，两边给出的解释和说明可能会有略微不同，但整体概念无差异。两侧的相关外部链接也会有差别。待编写完成并进行完善后会拆分为中英两版。写两版的主要理由一是在于为了规范表达消除二义性，二是为了笔者个人进行逻辑梳理和对译训练，三是希望能有海外和更多的字幕制作爱好者能够看到这篇文档，当然是否有帮助要交给各位来评判。
+- 本文配图使用[Mermaid](https://mermaidjs.github.io/)语法编写，Markdown文档自身可以在[Typora](typora.io)等软件内查看。网页版图片会使用本博客仓库其他分支作为图床，采用PicGo进行上传部署。
+
+## Introduction 绪论
 
 ### What is "Override"? 何为"重载"?
 
@@ -43,8 +62,7 @@ A[Word] --> |+|B[Font Style]
 B --> |+/A special kind of|C[Override Tags]
 C --> |Override|B
 ```
-
-<img src="./img/3-layer-en.png" style="zoom:50%;" />
+<img src="https://i.loli.net/2020/07/17/gSstkAUxrLRJ59o.png" style="zoom:50%;" />
 
 ### Break 空白
 
@@ -71,6 +89,8 @@ In most case, color notation is capital insensitive, which means `FFACDB`and`ffa
 >   Although it's hard for those programming freshman to comprehend, it's neccessary to tell somthing about [parameter](#Parameter-参数) so that it will be easier for amateurs to remember those **format**. The law is that every tag has only one parameter, or parameter tuple(list). So for those tags that need multi-variables, we need a `()` to make them together as a tuple, otherwise without it.
 
 #### Library 库
+
+
 
 #### Fx Scope 效果作用域
 
