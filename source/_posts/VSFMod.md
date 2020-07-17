@@ -1,3 +1,0 @@
-#VSFilterMod Override Tags
-
-## Fonts
