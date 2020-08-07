@@ -12,7 +12,7 @@ tags:
 - 编程
 ---
 
-# Aegisub Override Tags | Aegisub特效标签
+<!-- # Aegisub Override Tags | Aegisub特效标签 -->
 
 ## Preface 前言
 
@@ -125,9 +125,9 @@ In most case, color notation is capital insensitive, which means `FFACDB`and`ffa
 >
 > - **Left-Association(Priority)**
 >
->   In another word, it will read from left to right, so left code share higher priority than the right. So that's why `FF` equals to `FF0000` instead of `0000FF`. It's the same for inline key words and override tags.
+>   In another word, it will read from left to right, so the code on the right share higher priority than the left (because it will overwrite the attribute when it is parsed). So that's why `FF` equals to `FF0000` instead of `0000FF`. It's the same for inline key words and override tags.
 >
->   If you declared twice, it will accept the first(left) one instead of the last(right) one.
+>   If you declared twice, it will accept the last(right) one instead of the first(left) one.
 >
 > - **1-Parameter Inclusity**
 >
@@ -159,9 +159,9 @@ In most case, color notation is capital insensitive, which means `FFACDB`and`ffa
 >
 > - **左结合(优先)性**
 >
->   换种方式说，语法分析器会从左向右读，因此左边的优先级比右边更高。这也是为什么`FF`会被认为与`FF0000`等价而不是`0000FF`。对于标签内和标签间均是如此。
+>   换种方式说，语法分析器会从左向右读，因此左边的标签往往会被右边覆盖(右边的优先级更高)。这也是为什么`FF`会被认为与`FF0000`等价而不是`0000FF`。对于标签内和标签间均是如此。
 >
->   如果你重复声明两种颜色，那么它会取左边(前面)的颜色而非右边(后面)的颜色进行显示。
+>   如果你重复声明两种颜色，那么它会取右边(后面)的颜色而非左边(前面)的颜色进行显示。
 >
 > - **单参数性**
 >
@@ -443,3 +443,9 @@ If you forget about `color_notation`, you can return to paragraph [Color Notatio
 | Discription        | With/Without blur effect. |
 | Fx Scope           | Syllable                  |
 | Library Affiliated | VSFilter                  |
+
+
+## Reference 参考资料
+
+- [Official Documentation]()
+- [中文官方文档(感谢Vmoe字幕组提供)]()

@@ -2,10 +2,8 @@
 title: 工程师不同方向专业分级评价表
 date: 2020-07-14 23:00:00
 categories:
-- Develop
 - 开发
 tags: 
-- Programming
 - 编程
 ---
 
