@@ -20,29 +20,39 @@
     var CONFIG = {"hostname":"cyame.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="A live lib for memories and love.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="L.I.B.">
-<meta property="og:url" content="https://cyame.github.io/index.html">
+  <meta name="description" content="Preface 前言About Documentation 关于本文档It’s a personal edition of Aegisub Override Tags Documentation. This document is helpful to amateur and experienced, and also detailed enough for novice to build a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASS Override Tags | Aegisub特效标签">
+<meta property="og:url" content="https://cyame.github.io/2020/07/14/ASS-Override-Tags/index.html">
 <meta property="og:site_name" content="L.I.B.">
-<meta property="og:description" content="A live lib for memories and love.">
+<meta property="og:description" content="Preface 前言About Documentation 关于本文档It’s a personal edition of Aegisub Override Tags Documentation. This document is helpful to amateur and experienced, and also detailed enough for novice to build a">
+<meta property="og:image" content="https://i.loli.net/2020/07/17/yHVxqs7CuWabOjG.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/17/2DwNELYl8URgMJz.png">
+<meta property="article:published_time" content="2020-07-14T15:00:00.000Z">
+<meta property="article:modified_time" content="2020-08-25T01:55:20.464Z">
 <meta property="article:author" content="Cyame">
+<meta property="article:tag" content="Subtitle">
+<meta property="article:tag" content="字幕组">
+<meta property="article:tag" content="时轴">
+<meta property="article:tag" content="Programming">
+<meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/07/17/yHVxqs7CuWabOjG.png">
 
-<link rel="canonical" href="https://cyame.github.io/">
+<link rel="canonical" href="https://cyame.github.io/2020/07/14/ASS-Override-Tags/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>L.I.B.</title>
+  <title>ASS Override Tags | Aegisub特效标签 | L.I.B.</title>
   
 
 
@@ -141,281 +151,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/08/25/Subtitle-Group-File-System/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/25/Subtitle-Group-File-System/" class="post-title-link" itemprop="url">Subtitle-Group-File-System</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-              
-
-              <time title="Creado por: 2020-08-25 09:54:37 / Modificado por: 11:14:29" itemprop="dateCreated datePublished" datetime="2020-08-25T09:54:37+08:00">2020-08-25</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="字幕组文件服务系统搭建指南"><a href="#字幕组文件服务系统搭建指南" class="headerlink" title="字幕组文件服务系统搭建指南"></a>字幕组文件服务系统搭建指南</h1><p><em>开幕感谢技术支持无敌小火龙晨轩° 救Nginx苦手的菜菜我于水火之中</em></p>
-<blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本指南将尽可能详细地指导小白进行文件服务系统的搭建，并最终可以实现/学会以下内容：</p>
-<ul>
-<li>基于<a href="https://olaindex.js.org/" target="_blank" rel="noopener">OLAINDEX</a>的下载盘</li>
-<li>基于<a href="https://cloudreve.org/" target="_blank" rel="noopener">Cloudreve</a>的开源自建共享网盘</li>
-<li>基于<a href="https://oneinstack.com/" target="_blank" rel="noopener">OneInStack</a>的快速网站搭建</li>
-<li>基于<a href="https://github.com/ytdl-org/youtube-dl" target="_blank" rel="noopener">YouTube-DL</a>与<a href="https://github.com/MoeClub/OneList" target="_blank" rel="noopener">OneDriveUploader</a>的服务器扒源流程</li>
-</ul>
-<p>在阅读本指南之前，你需要具备以下基础：</p>
-<ul>
-<li>Linux系统基础操作<ul>
-<li>基础文件指令</li>
-<li>VIM文本编辑</li>
-<li>APT包管理(推荐使用Ubuntu16.04+)</li>
-</ul>
-</li>
-<li>一颗肯折腾、愿意不断学习和修复错误的心</li>
-</ul>
-<p>这些服务虽然是免费开源的，但服务器却不是。因此你还需要具备以下资源：</p>
-<ul>
-<li><p>一台海外网络服务器</p>
-<ul>
-<li>价格：$20-100不等/年</li>
-<li>推荐服务提供商：<a href="https://bandwagonhost.com/" target="_blank" rel="noopener">搬瓦工</a></li>
-</ul>
-</li>
-<li><p>一个域名</p>
-<ul>
-<li>价格：¥10-100不等/年</li>
-<li>推荐服务提供商：<a href="godaddy.com">GoDaddy</a></li>
-</ul>
-</li>
-<li><p>一个OneDrive(Microsoft Office 365)账号</p>
-<p><em>强烈推荐世纪互联版，在大陆地区下行可以跑满，其他亚洲区也可以稳定使用</em></p>
-<ul>
-<li>价格：¥500左右/永久</li>
-<li>推荐购买渠道：某宝</li>
-</ul>
-<p><em>一定要问清楚卖家是否支持OneIndex等使用API的服务，买错了可能会导致无法正常配置而吃瘪</em></p>
-<p><em>（不要贪便宜去买低价黑卡，产品介绍里可能写不支持，最好能和客服提前交流）</em></p>
-</li>
-</ul>
-<p>​        <strong>如果你不使用世纪互联版，一是可以使用学生信息去注册(似乎会获得5T免费空间)，二是也可以直接去购买国际版账号。</strong></p>
-<p>​        <strong>当然个人版也是极好的！</strong>（但是本文中许多操作都是为了使用世纪互联而去做的，如果使用国际版的话，可以使用被更广泛使用的OneIndex来替代OLAINDEX，部署方法/步骤更简单（可以参见其他教程）。</p>
-<ul>
-<li>*<del>一个梯子</del>*</li>
-<li><del>一台网速尚可的个人电脑</del></li>
-<li>一个SSH链接工具<ul>
-<li>价格：免费/<del>有一些付费的但没必要</del></li>
-<li>推荐软件：MobaXTerm(Windows)/Terminus(Mac)</li>
-</ul>
-</li>
-</ul>
-<p>当然，你可以先阅读本指南了解全部流程后再决定是否购入。关于VPS服务器等一系列资源，网上都有各类充分详尽的教程，因此如何配置DNS解析，如何做CDN，如何购买服务器刷系统、备份镜像等内容不会再本指南中过度展开。</p>
-<p>上述推荐服务商仅为本教程所使用的服务商，目前已稳定运行半年以上，<strong>本身不存在推广</strong><del>没有恰饭</del>。如果不想对比其他教程使用其他服务商，想阅读本指南一步到位，那还请使用相似的系统方便操作。</p>
-<h2 id="敬告"><a href="#敬告" class="headerlink" title="敬告"></a>敬告</h2><p>由于网络服务商/域名提供商/(尤其是)网盘存储提供商可能存在跑路情况(泥给路达哟.gif) 本指南不会对所推荐网络服务的稳定性进行任何承诺和担保！如出现任何情况，请自行妥善处理！<del>域名过期了换个域名和SSL证书，服务器跑路了推倒重来一遍，网盘跑路了…wdnmd文件都没了，那还是看情况找个NAS或者稳定的云服务器服务就好；当然有能力维权的话也请维护自己正当权利！</del></p>
-<p>本指南所涉及内容均为爱好者自建行为，未参考地方法律相关条款。请不要使用本服务进行违法犯罪活动（商业行为请自行确认并依法备案），所产生的法律风险本文作者概不负责。</p>
-<p>本指南遵循MIT License，保留署名权。禁止一切未标明出处和作者的转载，对于侵权行为保留一切法律追责权利。请周知！</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/08/25/Python-AI/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/25/Python-AI/" class="post-title-link" itemprop="url">Python-AI</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-08-25 09:53:58" itemprop="dateCreated datePublished" datetime="2020-08-25T09:53:58+08:00">2020-08-25</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/Level/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/Level/" class="post-title-link" itemprop="url">工程师不同方向专业分级评价表</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-10 11:23:51" itemprop="dateModified" datetime="2020-08-10T11:23:51+08:00">2020-08-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">En</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>Level4</li>
-</ul>
-<p>精通</p>
-<p>预研，设计，开发，debug，测试经理</p>
-<p>1）具备模块子系统的架构设计能力；<br>2）能深入理解子系统对整体架构的影响；<br>3）具备资深的模块设计和开发能力以及评审能力；<br>4）具备专业的文档输出能力；<br>5）具备测试架构设计以及用例设计的指导能力；<br>6）精通模块关键性能指标以及相关标准；<br>7）熟悉业内先进技术以及演进路线并具备相应的战略判断力；<br>8）具备与客户的深入沟通以及客户导向引导能力；<br>9）能组织并决策子系统内部的架构设计评审以及开发评审；<br>10)及时发现并提出基于过程改进的建设性建议和措施；</p>
-<ul>
-<li>Level3</li>
-</ul>
-<p>熟练</p>
-<p>设计，开发，debug，测试leader</p>
-<p>1）具备深入的模块设计和开发能力以及设计评审能力；<br>2）具备专业的文档输出能力；<br>3）熟悉模块子系统的架构以及外部接口；<br>4）具备测试用例设计的指导能力；<br>5）了解模块关键性能指标以及相关标准；<br>6）能组织子系统内部的开发和测试用例评审；<br>7）能提出过程优化建议以及改进措施；</p>
-<ul>
-<li>Level2</li>
-</ul>
-<p>有经验</p>
-<p>开发，debug，测试sub leader</p>
-<p>1）具备模块的开发能力并能独立完成工作；<br>2）具备基本的文档撰写能力；<br>3）具备测试用例设计指导能力；<br>4）具备模块外部接口的相关知识和基本的debug能力；<br>5）熟悉开发环境以及相应的开发、提交、评审、发布流程；</p>
-<ul>
-<li>Level1</li>
-</ul>
-<p>入门</p>
-<p>开发，debug（需要有人指导），按照测试用例测试</p>
-<p>1）具备基本的模块知识以及模块外部接口知识，并可在他人指导下完成工作；<br>2）具备模块相应的测试知识；<br>3）熟悉开发环境以及开发提交、评审流程；</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -431,10 +170,9 @@
       <meta itemprop="name" content="L.I.B.">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/ASS-Override-Tags/" class="post-title-link" itemprop="url">ASS Override Tags | Aegisub特效标签</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ASS Override Tags | Aegisub特效标签
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -477,7 +215,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <!-- # Aegisub Override Tags | Aegisub特效标签 -->
+        <!-- # Aegisub Override Tags | Aegisub特效标签 -->
 
 <h2 id="Preface-前言"><a href="#Preface-前言" class="headerlink" title="Preface 前言"></a>Preface 前言</h2><h3 id="About-Documentation-关于本文档"><a href="#About-Documentation-关于本文档" class="headerlink" title="About Documentation 关于本文档"></a>About Documentation 关于本文档</h3><p>It’s a personal edition of Aegisub Override Tags Documentation. This document is helpful to <strong>amateur</strong> and <strong>experienced</strong>, and also detailed enough for novice to build a comprehension to the tags. Also, if you are an expert, the documents will also have a great help in understanding <strong>why</strong> it is so. So you won’t have to spend so many time in debugging or reviewing the official documents everytime you use them.</p>
 <p>Before you read, I’d like to state that the tag is highly associated with computer programming, though it’s possible to be used without any programming skills. Thus if there’s anything caught you stucked, please skip it. Every paragraph is kind of independent that a questioning paragraph won’t influence the understanding of other parts.</p>
@@ -1203,467 +941,60 @@
 <li><a href="">中文官方文档(感谢Vmoe字幕组提供)</a></li>
 </ul>
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/ASS-OverrideTags-API-CN/">
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
+    <div class="social-list">
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/ASS-OverrideTags-API-CN/" class="post-title-link" itemprop="url">Aegisub特效标签代码速查表</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-07-24 16:40:04" itemprop="dateModified" datetime="2020-07-24T16:40:04+08:00">2020-07-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">En</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Subtitle/%E5%AD%97%E5%B9%95%E7%BB%84/" itemprop="url" rel="index"><span itemprop="name">字幕组</span></a>
-                </span>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/Cyame1121">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
             </span>
 
-          
-
+            <span class="label">Twitter</span>
+          </a>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
     </div>
+  </div>
 
-    
-    
-    
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/Subtitle/" rel="tag"># Subtitle</a>
+              <a href="/tags/%E5%AD%97%E5%B9%95%E7%BB%84/" rel="tag"># 字幕组</a>
+              <a href="/tags/%E6%97%B6%E8%BD%B4/" rel="tag"># 时轴</a>
+              <a href="/tags/Programming/" rel="tag"># Programming</a>
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/14/ASS-OverrideTags-API-CN/" rel="prev" title="Aegisub特效标签代码速查表">
+      <i class="fa fa-chevron-left"></i> Aegisub特效标签代码速查表
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/14/Level/" rel="next" title="工程师不同方向专业分级评价表">
+      工程师不同方向专业分级评价表 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/ASS-OverrideTags-API-EN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/ASS-OverrideTags-API-EN/" class="post-title-link" itemprop="url">API of ASS Override Tags</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-07-24 16:40:04" itemprop="dateModified" datetime="2020-07-24T16:40:04+08:00">2020-07-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">En</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Subtitle/%E5%AD%97%E5%B9%95%E7%BB%84/" itemprop="url" rel="index"><span itemprop="name">字幕组</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/Dance-with-GitHub/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/Dance-with-GitHub/" class="post-title-link" itemprop="url">与GitHub共舞</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 09:55:48" itemprop="dateModified" datetime="2020-08-25T09:55:48+08:00">2020-08-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">En</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <!-- # 与GitHub共舞 -->
-
-<h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><h2 id="关于Git"><a href="#关于Git" class="headerlink" title="关于Git"></a>关于Git</h2><h2 id="关于GitHub"><a href="#关于GitHub" class="headerlink" title="关于GitHub"></a>关于GitHub</h2><h3 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h3><h3 id="Marketplace"><a href="#Marketplace" class="headerlink" title="Marketplace"></a>Marketplace</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/12/Lua/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/12/Lua/" class="post-title-link" itemprop="url">Lua</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 10:26:13" itemprop="dateModified" datetime="2020-08-25T10:26:13+08:00">2020-08-25</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Lua-Grammar"><a href="#Lua-Grammar" class="headerlink" title="Lua Grammar"></a>Lua Grammar</h1><h2 id="Data-Type"><a href="#Data-Type" class="headerlink" title="Data Type"></a>Data Type</h2><h2 id="Basic-Operator"><a href="#Basic-Operator" class="headerlink" title="Basic Operator"></a>Basic Operator</h2><h2 id="Loop"><a href="#Loop" class="headerlink" title="Loop"></a>Loop</h2><h2 id="Condition"><a href="#Condition" class="headerlink" title="Condition"></a>Condition</h2><h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/12/Re/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/12/Re/" class="post-title-link" itemprop="url">Re</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h1><p>正则表达式<br>Form：用/Re/包围</p>
-<p>? -&gt; 0,一个字符</p>
-<ul>
-<li>-&gt; 0,1,多个字符<br>^ -&gt; 字符串起始位置<br>$ -&gt; 字符串结束位置<br>[0-9]单个数字<br>[a-z]单个字母<br>{3,15}3~15个字符</li>
-</ul>
-<ul>
-<li>-&gt;前一个字符出现1+次</li>
-</ul>
-<ul>
-<li>-&gt;前一个字符出现0+次<br>? -&gt;前一个字符出现0,1次</li>
-</ul>
-<p>转义<br>\cx 匹配由x指明的控制字符<br>\f = \cL = 匹配换页符<br>\n = \cJ = 匹配换行符<br>\r = \cM = 匹配回车符<br>\s = 匹配任何空白字符<br>\S = 匹配任何非空白字符<br>\t = \cl = 匹配制表符<br>\v = \cK = 匹配垂直制表符</p>
-<p>$ 字符串结尾<br>() 子表达式首尾</p>
-<ul>
-<li>0+</li>
-</ul>
-<ul>
-<li>1+<br>. 除了换行\n以外任何单字符<br>[] 表达式首尾<br>? 0或1次<br>\ 转义符<br>^ 起始位置<br>{} 限定符首尾<br>| 两项间选择</li>
-</ul>
-<p>限定符<br>{n}匹配n次<br>{n,}匹配至少n次<br>{n,m}匹配n~m次</p>
-<p>常用组合<br>.* 单行<br>.*? 最小单行</p>
-<p>定位符<br>\b 匹配单词边界<br>\B 匹配非单词边界</p>
-<p>优先级<br>转义&gt;方括号&amp;圆括号&gt;限定符&gt;定位点/序列&gt;或</p>
-<p>常用<br>^[a-zA-Z0-9_]+$      // 所有包含一个以上的字母、数字或下划线的字符串<br>^[1-9][0-9]*$        // 所有的正整数<br>^-?[0-9]+$          // 所有的整数<br>^[-]?[0-9]+(.[0-9]+)?$ // 所有的浮点数<br>☝[-]?是可选负号的意思</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/12/About-Shell/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/12/About-Shell/" class="post-title-link" itemprop="url">About-Shell</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 09:55:08" itemprop="dateModified" datetime="2020-08-25T09:55:08+08:00">2020-08-25</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.cnblogs.com/handsomecui/p/5869361.html" target="_blank" rel="noopener">https://www.cnblogs.com/handsomecui/p/5869361.html</a></p>
-<p><a href="https://www.cnblogs.com/ZHshuang463508120/p/11898002.html" target="_blank" rel="noopener">https://www.cnblogs.com/ZHshuang463508120/p/11898002.html</a></p>
-<p><a href="https://blog.csdn.net/sdb5858874/article/details/80522129" target="_blank" rel="noopener">https://blog.csdn.net/sdb5858874/article/details/80522129</a></p>
-<p><a href="https://www.jianshu.com/p/576a4193aa82" target="_blank" rel="noopener">https://www.jianshu.com/p/576a4193aa82</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Página siguiente"></i></a>
-  </nav>
 
 
 
@@ -1715,6 +1046,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preface-前言"><span class="nav-number">1.</span> <span class="nav-text">Preface 前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#About-Documentation-关于本文档"><span class="nav-number">1.1.</span> <span class="nav-text">About Documentation 关于本文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#About-Notation-关于注记"><span class="nav-number">1.2.</span> <span class="nav-text">About Notation 关于注记</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction-绪论"><span class="nav-number">2.</span> <span class="nav-text">Introduction 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-“Override”-何为”重载”"><span class="nav-number">2.1.</span> <span class="nav-text">What is “Override”? 何为”重载”?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Break-空白"><span class="nav-number">2.2.</span> <span class="nav-text">Break 空白</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Line-Autobreaking-Style-自动换行模式"><span class="nav-number">2.3.</span> <span class="nav-text">Line Autobreaking Style 自动换行模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interpretation-名词解释"><span class="nav-number">2.4.</span> <span class="nav-text">Interpretation 名词解释</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Color-Notation-颜色注记"><span class="nav-number">2.4.1.</span> <span class="nav-text">Color Notation 颜色注记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Library-库"><span class="nav-number">2.4.2.</span> <span class="nav-text">Library 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tag-Scope-标签作用域"><span class="nav-number">2.4.3.</span> <span class="nav-text">Tag Scope 标签作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parameter-参数"><span class="nav-number">2.4.4.</span> <span class="nav-text">Parameter 参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elements-元素"><span class="nav-number">3.</span> <span class="nav-text">Elements 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Size-大小"><span class="nav-number">3.1.</span> <span class="nav-text">Size 大小</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Font-Size-字体大小"><span class="nav-number">3.1.1.</span> <span class="nav-text">Font Size 字体大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Element-Size-元素大小"><span class="nav-number">3.1.2.</span> <span class="nav-text">Element Size 元素大小</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Color-颜色"><span class="nav-number">3.2.</span> <span class="nav-text">Color 颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Simple-Color-单色"><span class="nav-number">3.2.1.</span> <span class="nav-text">Simple Color 单色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Various-Color-渐变色"><span class="nav-number">3.2.2.</span> <span class="nav-text">Various Color 渐变色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-Style-字体样式"><span class="nav-number">3.3.</span> <span class="nav-text">Font Style 字体样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Border-Width-描边宽度"><span class="nav-number">3.3.1.</span> <span class="nav-text">Border Width 描边宽度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Shadow-Distance-阴影距离"><span class="nav-number">3.3.2.</span> <span class="nav-text">Shadow Distance 阴影距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Blur-Edge-模糊边缘"><span class="nav-number">3.3.3.</span> <span class="nav-text">Blur Edge 模糊边缘</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Simple-Blur-简单模糊"><span class="nav-number">3.3.3.1.</span> <span class="nav-text">Simple Blur 简单模糊</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Gaussian-Blur-高斯模糊"><span class="nav-number">3.3.3.2.</span> <span class="nav-text">Gaussian Blur 高斯模糊</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spacing-字符间距"><span class="nav-number">3.3.4.</span> <span class="nav-text">Spacing 字符间距</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Font-Family-字体"><span class="nav-number">3.3.5.</span> <span class="nav-text">Font Family 字体</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shape-AssDraw-形状-绘图"><span class="nav-number">4.</span> <span class="nav-text">Shape(AssDraw) 形状(绘图)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Draw-Activation-开启绘图"><span class="nav-number">4.1.</span> <span class="nav-text">Draw Activation 开启绘图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attribute-属性"><span class="nav-number">5.</span> <span class="nav-text">Attribute 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Alpha-不透明度"><span class="nav-number">5.1.</span> <span class="nav-text">Alpha 不透明度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Line-Alignment-对齐方式"><span class="nav-number">5.2.</span> <span class="nav-text">Line Alignment 对齐方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#X-axis-Rotation-Fake-3D-X轴旋转-伪3D"><span class="nav-number">5.2.1.</span> <span class="nav-text">X-axis Rotation (Fake 3D) X轴旋转(伪3D)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Y-axis-Rotation-Fake-3D-Y轴旋转-伪3D"><span class="nav-number">5.2.2.</span> <span class="nav-text">Y-axis Rotation (Fake 3D) Y轴旋转(伪3D)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mask-遮罩"><span class="nav-number">5.3.</span> <span class="nav-text">Mask 遮罩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Clip-矩形遮罩"><span class="nav-number">5.3.1.</span> <span class="nav-text">Clip 矩形遮罩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bezier-Clip-贝塞尔遮罩"><span class="nav-number">5.3.2.</span> <span class="nav-text">Bezier Clip 贝塞尔遮罩</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Position-位置"><span class="nav-number">5.4.</span> <span class="nav-text">Position 位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Style-Reset-重置样式"><span class="nav-number">5.5.</span> <span class="nav-text">Style Reset 重置样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Motion-动画"><span class="nav-number">6.</span> <span class="nav-text">Motion 动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Keyframe-Animation-关键帧动画"><span class="nav-number">6.1.</span> <span class="nav-text">Keyframe Animation 关键帧动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fade-Fade-in-amp-out-渐变-淡入淡出"><span class="nav-number">6.2.</span> <span class="nav-text">Fade(Fade-in&amp;out) 渐变(淡入淡出)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Simple-Fade-简单渐变"><span class="nav-number">6.2.1.</span> <span class="nav-text">Simple Fade 简单渐变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Complex-Fade-复杂渐变"><span class="nav-number">6.2.2.</span> <span class="nav-text">Complex Fade 复杂渐变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Move-in-line"><span class="nav-number">6.2.3.</span> <span class="nav-text">Move-in-line</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Complex-Movement"><span class="nav-number">6.2.4.</span> <span class="nav-text">Complex Movement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Karaoke-卡拉OK"><span class="nav-number">7.</span> <span class="nav-text">Karaoke 卡拉OK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Time"><span class="nav-number">7.1.</span> <span class="nav-text">Key Time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-with-Fade"><span class="nav-number">7.2.</span> <span class="nav-text">Key with Fade</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclusion"><span class="nav-number">7.3.</span> <span class="nav-text">Conclusion</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference-参考资料"><span class="nav-number">8.</span> <span class="nav-text">Reference 参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
