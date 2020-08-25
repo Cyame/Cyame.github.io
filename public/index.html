@@ -82,7 +82,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Cambiar a barra de navegación">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -112,12 +112,12 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Inicio</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archivo</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
 
   </li>
   </ul>
@@ -169,10 +169,10 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
-              <time title="Creado por: 2020-08-25 09:54:37 / Modificado por: 11:14:29" itemprop="dateCreated datePublished" datetime="2020-08-25T09:54:37+08:00">2020-08-25</time>
+              <time title="Erstellt: 2020-08-25 09:54:37 / Geändert am: 15:25:37" itemprop="dateCreated datePublished" datetime="2020-08-25T09:54:37+08:00">2020-08-25</time>
             </span>
 
           
@@ -246,7 +246,88 @@
 <p>本指南所涉及内容均为爱好者自建行为，未参考地方法律相关条款。请不要使用本服务进行违法犯罪活动（商业行为请自行确认并依法备案），所产生的法律风险本文作者概不负责。</p>
 <p>本指南遵循MIT License，保留署名权。禁止一切未标明出处和作者的转载，对于侵权行为保留一切法律追责权利。请周知！</p>
 </blockquote>
+<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><p><em>请确认您已具备前文中所需条件方可开始操作</em></p>
+<h2 id="配置DNS解析"><a href="#配置DNS解析" class="headerlink" title="配置DNS解析"></a>配置DNS解析</h2><p>与其他的教程不同，我推荐先进行DNS解析的配置（主要原因在于解析的生效需要一段时间。虽然GoDaddy生效较快，基本2-5分钟就可以，但不同的域名服务商生效时间不同，可能需要30分钟甚至更长时间）。</p>
+<h4 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h4><ul>
+<li><p>注册一个账户（记得配置一个有效邮箱方便找回）</p>
+</li>
+<li><p>点击<strong>域名注册</strong></p>
+<p><img src="https://i.loli.net/2020/08/25/kmqMTXZ4jsghSwI.png" alt="image-20200825143008462"></p>
+</li>
+<li><p>搜索想要的域名（无需后缀）</p>
+<p>例如搜索<strong>myddsite</strong>，得到以下结果：<img src="https://i.loli.net/2020/08/25/VrU3M4P6fpAOzNm.png" alt="image-20200825143138087">一般选择最便宜的即可（<code>.xyz</code>的域名通常最便宜，如果没有什么刚需建议找价格合适的就可，解析速度体感上区别不大）</p>
+</li>
+<li><p>付款（支持支付宝）</p>
+<p>之后加入购物车进行购买即可，选择一年即可。</p>
+<p><img src="https://i.loli.net/2020/08/25/Ci6Jme4kEQotuxn.png" alt="image-20200825143534573"></p>
+<p><em>注意：可能会有绑定一些安全服务或者建站服务，这里完全不需要，可以直接取消掉…一般来说只要域名够长，最多30块钱以内就可以搞定。</em></p>
+<p><img src="https://i.loli.net/2020/08/25/BUnToR13eVhgabI.png" alt="image-20200825143631577"></p>
+<p>确认无误后点击<strong>结账</strong>即可，支持支付宝！</p>
+<p><em>（当然这个我没买，所以之后的域名会部分打码，请理解！）</em></p>
+</li>
+</ul>
+<h4 id="打开DNS解析配置页"><a href="#打开DNS解析配置页" class="headerlink" title="打开DNS解析配置页"></a>打开DNS解析配置页</h4><p>登录后点击右上角的用户名，从下拉菜单中打开<strong>我的产品</strong>。</p>
+<p><img src="https://i.loli.net/2020/08/25/ovtKRirWPCxMZAc.png" alt="image-20200825143850580"></p>
+<p>可以看到自己所购买的域名：</p>
+<p><img src="https://i.loli.net/2020/08/25/zYZuVkWBI5RtL8e.png" alt="image-20200825144019224"></p>
+<p>点击<strong>DNS</strong>，进入DNS配置界面：</p>
+<p><img src="https://i.loli.net/2020/08/25/XwQKxcb87WOYVL5.png" alt="image-20200825144244812"></p>
+<h4 id="配置A域名解析"><a href="#配置A域名解析" class="headerlink" title="配置A域名解析"></a>配置A域名解析</h4><p>DNS解析记录我们需要了解两种即可：CNAME和A。</p>
+<ul>
+<li><p>A是名访问，即给服务器的IP地址<strong>命名</strong>。图中@即是指，如果直接在浏览器中输入<strong>myddpoint.xyz</strong>的话，会请求<strong>值</strong>中的IP。</p>
+</li>
+<li><p>CNAME有点类似于重定向，是使用一个域名指向另一个域名的方法。图中的www指的是，访问<strong><a href="http://www.myddpoint.xyz" target="_blank" rel="noopener">www.myddpoint.xyz</a></strong>与<strong>myddpoint.xyz</strong>是等价的（会指向<strong>myddpoint.xyz</strong>）。</p>
+</li>
+</ul>
+<p>因此我们可以点击右下角的添加，添加一个A类型的解析：</p>
+<p><img src="https://i.loli.net/2020/08/25/147ioSKGzfsQqdH.png" alt="image-20200825145410566"></p>
+<p>主机即为<strong>名称</strong>，或者可以成为<strong>次级域名</strong>；<strong>指向</strong>即为服务主机(的IP)。</p>
+<p>例：假设这里主机填写be，指向填写2.3.4.5。那么当我们在浏览器中访问<strong>be.myddpoint.xyz</strong>时，会访问2.3.4.5的80端口(HTTP)或者443端口(HTTPS)，具体取决于后文中是否配置了SSL证书以及NGINX配置。这里我们可以模糊地理解为<em>给2.3.4.5起名为<strong>be.myddpoint.xyz</strong>。</em></p>
+<p>在这里，你需要申请两个次级域名，分别对应上述<strong>OLAINDEX</strong>和<strong>Cloudreve</strong>的服务。</p>
+<h2 id="初始化服务器环境"><a href="#初始化服务器环境" class="headerlink" title="初始化服务器环境"></a>初始化服务器环境</h2><h3 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h3><h3 id="重建系统"><a href="#重建系统" class="headerlink" title="重建系统"></a>重建系统</h3><h3 id="使用SSH连接"><a href="#使用SSH连接" class="headerlink" title="使用SSH连接"></a>使用SSH连接</h3><h3 id="更新APT镜像"><a href="#更新APT镜像" class="headerlink" title="更新APT镜像"></a>更新APT镜像</h3><p>在控制台中运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br></pre></td></tr></table></figure>
 
+<h3 id="运行一键安装脚本"><a href="#运行一键安装脚本" class="headerlink" title="运行一键安装脚本"></a>运行一键安装脚本</h3><p><em>请按顺序进行运行，有部分软件依赖由前一步携带安装</em></p>
+<ul>
+<li><p>安装YouTube-DL和OneDriveUploader</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install curl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/lovezzzxxx/liverecord/master/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载Cloudreve服务</p>
+<p>请下载到非/root/(~)目录下，并在下载解压后使用<code>chmod +777 &lt;解压可执行文件&gt;</code>进行授权。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载OLAINDEX服务</p>
+<p>请下载到非/root/(~)目录下，并在下载解压后使用<code>chmod +777 &lt;解压文件夹&gt;</code>进行授权。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一键NGINX+PHP脚本（来自ONEINSTACK）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz &amp;&amp; tar xzf oneinstack-full.tar.gz &amp;&amp; ./oneinstack/install.sh --nginx_option 1 --php_option 8 --phpcache_option 1 --reboot</span><br></pre></td></tr></table></figure>
+
+<p>运行后会自动断开SSH连接并重启，请稍后</p>
+</li>
+</ul>
+<h3 id="安装配置环境-amp-检测"><a href="#安装配置环境-amp-检测" class="headerlink" title="安装配置环境&amp;检测"></a>安装配置环境&amp;检测</h3><h2 id="OneDrive服务搭建"><a href="#OneDrive服务搭建" class="headerlink" title="OneDrive服务搭建"></a>OneDrive服务搭建</h2><h2 id="启动WEB服务"><a href="#启动WEB服务" class="headerlink" title="启动WEB服务"></a>启动WEB服务</h2><h3 id="申请SSL证书"><a href="#申请SSL证书" class="headerlink" title="申请SSL证书"></a>申请SSL证书</h3><p>使用运行脚本时下载的Oneinstack进行一键SSL申请+配置（默认应该在<code>~/oneinstack/</code>）</p>
+<p>运行其中的<code>vhost.sh</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/root/oneinstack/vhost.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置NGINX"><a href="#配置NGINX" class="headerlink" title="配置NGINX"></a>配置NGINX</h3><p>但是vhost配置的服务是给静态网站使用的，本次需要配置的网站一个为本地服务，另一个为伪静态网站，需要另行配置。</p>
+<p>因此在分别添加vhost服务后，需要对<code>/usr/local/nginx/conf/vhost/</code>中网站对应服务的配置文件作出修改，在此给出范例：</p>
+<ul>
+<li><p>OLAINDEX</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Cloudreve</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="重启NGINX服务"><a href="#重启NGINX服务" class="headerlink" title="重启NGINX服务"></a>重启NGINX服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化文件系统"><a href="#初始化文件系统" class="headerlink" title="初始化文件系统"></a>初始化文件系统</h2><h3 id="YouTube-DL-OneDriveUploader"><a href="#YouTube-DL-OneDriveUploader" class="headerlink" title="YouTube-DL + OneDriveUploader"></a>YouTube-DL + OneDriveUploader</h3><h3 id="OLAINDEX"><a href="#OLAINDEX" class="headerlink" title="OLAINDEX"></a>OLAINDEX</h3><h3 id="Cloudreve"><a href="#Cloudreve" class="headerlink" title="Cloudreve"></a>Cloudreve</h3><h2 id="用户使用指南"><a href="#用户使用指南" class="headerlink" title="用户使用指南"></a>用户使用指南</h2>
       
     </div>
 
@@ -287,9 +368,9 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-08-25 09:53:58" itemprop="dateCreated datePublished" datetime="2020-08-25T09:53:58+08:00">2020-08-25</time>
+              <time title="Erstellt: 2020-08-25 09:53:58" itemprop="dateCreated datePublished" datetime="2020-08-25T09:53:58+08:00">2020-08-25</time>
             </span>
 
           
@@ -304,103 +385,6 @@
 
       
           
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/Level/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Cyame">
-      <meta itemprop="description" content="A live lib for memories and love.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L.I.B.">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/Level/" class="post-title-link" itemprop="url">工程师不同方向专业分级评价表</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Publicado el</span>
-
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-10 11:23:51" itemprop="dateModified" datetime="2020-08-10T11:23:51+08:00">2020-08-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">En</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>Level4</li>
-</ul>
-<p>精通</p>
-<p>预研，设计，开发，debug，测试经理</p>
-<p>1）具备模块子系统的架构设计能力；<br>2）能深入理解子系统对整体架构的影响；<br>3）具备资深的模块设计和开发能力以及评审能力；<br>4）具备专业的文档输出能力；<br>5）具备测试架构设计以及用例设计的指导能力；<br>6）精通模块关键性能指标以及相关标准；<br>7）熟悉业内先进技术以及演进路线并具备相应的战略判断力；<br>8）具备与客户的深入沟通以及客户导向引导能力；<br>9）能组织并决策子系统内部的架构设计评审以及开发评审；<br>10)及时发现并提出基于过程改进的建设性建议和措施；</p>
-<ul>
-<li>Level3</li>
-</ul>
-<p>熟练</p>
-<p>设计，开发，debug，测试leader</p>
-<p>1）具备深入的模块设计和开发能力以及设计评审能力；<br>2）具备专业的文档输出能力；<br>3）熟悉模块子系统的架构以及外部接口；<br>4）具备测试用例设计的指导能力；<br>5）了解模块关键性能指标以及相关标准；<br>6）能组织子系统内部的开发和测试用例评审；<br>7）能提出过程优化建议以及改进措施；</p>
-<ul>
-<li>Level2</li>
-</ul>
-<p>有经验</p>
-<p>开发，debug，测试sub leader</p>
-<p>1）具备模块的开发能力并能独立完成工作；<br>2）具备基本的文档撰写能力；<br>3）具备测试用例设计指导能力；<br>4）具备模块外部接口的相关知识和基本的debug能力；<br>5）熟悉开发环境以及相应的开发、提交、评审、发布流程；</p>
-<ul>
-<li>Level1</li>
-</ul>
-<p>入门</p>
-<p>开发，debug（需要有人指导），按照测试用例测试</p>
-<p>1）具备基本的模块知识以及模块外部接口知识，并可在他人指导下完成工作；<br>2）具备模块相应的测试知识；<br>3）熟悉开发环境以及开发提交、评审流程；</p>
-
       
     </div>
 
@@ -441,26 +425,26 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
+              <time title="Erstellt: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 09:55:20" itemprop="dateModified" datetime="2020-08-25T09:55:20+08:00">2020-08-25</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-08-25 09:55:20" itemprop="dateModified" datetime="2020-08-25T09:55:20+08:00">2020-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">En</span>
+              <span class="post-meta-item-text">in</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a>
                 </span>
-                  , 
+                  . 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Subtitle/%E5%AD%97%E5%B9%95%E7%BB%84/" itemprop="url" rel="index"><span itemprop="name">字幕组</span></a>
                 </span>
@@ -1221,7 +1205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/ASS-OverrideTags-API-CN/">
+    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/ASS-OverrideTags-API-EN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1235,7 +1219,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/14/ASS-OverrideTags-API-CN/" class="post-title-link" itemprop="url">Aegisub特效标签代码速查表</a>
+            <a href="/2020/07/14/ASS-OverrideTags-API-EN/" class="post-title-link" itemprop="url">API of ASS Override Tags</a>
         </h2>
 
         <div class="post-meta">
@@ -1243,26 +1227,26 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
+              <time title="Erstellt: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-07-24 16:40:04" itemprop="dateModified" datetime="2020-07-24T16:40:04+08:00">2020-07-24</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-07-24 16:40:04" itemprop="dateModified" datetime="2020-07-24T16:40:04+08:00">2020-07-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">En</span>
+              <span class="post-meta-item-text">in</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a>
                 </span>
-                  , 
+                  . 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Subtitle/%E5%AD%97%E5%B9%95%E7%BB%84/" itemprop="url" rel="index"><span itemprop="name">字幕组</span></a>
                 </span>
@@ -1298,7 +1282,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/ASS-OverrideTags-API-EN/">
+    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/ASS-OverrideTags-API-CN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1312,7 +1296,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/14/ASS-OverrideTags-API-EN/" class="post-title-link" itemprop="url">API of ASS Override Tags</a>
+            <a href="/2020/07/14/ASS-OverrideTags-API-CN/" class="post-title-link" itemprop="url">Aegisub特效标签代码速查表</a>
         </h2>
 
         <div class="post-meta">
@@ -1320,26 +1304,26 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
+              <time title="Erstellt: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-07-24 16:40:04" itemprop="dateModified" datetime="2020-07-24T16:40:04+08:00">2020-07-24</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-07-24 16:40:04" itemprop="dateModified" datetime="2020-07-24T16:40:04+08:00">2020-07-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">En</span>
+              <span class="post-meta-item-text">in</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a>
                 </span>
-                  , 
+                  . 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Subtitle/%E5%AD%97%E5%B9%95%E7%BB%84/" itemprop="url" rel="index"><span itemprop="name">字幕组</span></a>
                 </span>
@@ -1397,22 +1381,22 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
+              <time title="Erstellt: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 09:55:48" itemprop="dateModified" datetime="2020-08-25T09:55:48+08:00">2020-08-25</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-08-25 09:55:48" itemprop="dateModified" datetime="2020-08-25T09:55:48+08:00">2020-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">En</span>
+              <span class="post-meta-item-text">in</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
                 </span>
@@ -1432,6 +1416,103 @@
           <!-- # 与GitHub共舞 -->
 
 <h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><h2 id="关于Git"><a href="#关于Git" class="headerlink" title="关于Git"></a>关于Git</h2><h2 id="关于GitHub"><a href="#关于GitHub" class="headerlink" title="关于GitHub"></a>关于GitHub</h2><h3 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h3><h3 id="Marketplace"><a href="#Marketplace" class="headerlink" title="Marketplace"></a>Marketplace</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://cyame.github.io/2020/07/14/Level/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Cyame">
+      <meta itemprop="description" content="A live lib for memories and love.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L.I.B.">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/14/Level/" class="post-title-link" itemprop="url">工程师不同方向专业分级评价表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              <time title="Erstellt: 2020-07-14 23:00:00" itemprop="dateCreated datePublished" datetime="2020-07-14T23:00:00+08:00">2020-07-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-08-10 11:23:51" itemprop="dateModified" datetime="2020-08-10T11:23:51+08:00">2020-08-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>Level4</li>
+</ul>
+<p>精通</p>
+<p>预研，设计，开发，debug，测试经理</p>
+<p>1）具备模块子系统的架构设计能力；<br>2）能深入理解子系统对整体架构的影响；<br>3）具备资深的模块设计和开发能力以及评审能力；<br>4）具备专业的文档输出能力；<br>5）具备测试架构设计以及用例设计的指导能力；<br>6）精通模块关键性能指标以及相关标准；<br>7）熟悉业内先进技术以及演进路线并具备相应的战略判断力；<br>8）具备与客户的深入沟通以及客户导向引导能力；<br>9）能组织并决策子系统内部的架构设计评审以及开发评审；<br>10)及时发现并提出基于过程改进的建设性建议和措施；</p>
+<ul>
+<li>Level3</li>
+</ul>
+<p>熟练</p>
+<p>设计，开发，debug，测试leader</p>
+<p>1）具备深入的模块设计和开发能力以及设计评审能力；<br>2）具备专业的文档输出能力；<br>3）熟悉模块子系统的架构以及外部接口；<br>4）具备测试用例设计的指导能力；<br>5）了解模块关键性能指标以及相关标准；<br>6）能组织子系统内部的开发和测试用例评审；<br>7）能提出过程优化建议以及改进措施；</p>
+<ul>
+<li>Level2</li>
+</ul>
+<p>有经验</p>
+<p>开发，debug，测试sub leader</p>
+<p>1）具备模块的开发能力并能独立完成工作；<br>2）具备基本的文档撰写能力；<br>3）具备测试用例设计指导能力；<br>4）具备模块外部接口的相关知识和基本的debug能力；<br>5）熟悉开发环境以及相应的开发、提交、评审、发布流程；</p>
+<ul>
+<li>Level1</li>
+</ul>
+<p>入门</p>
+<p>开发，debug（需要有人指导），按照测试用例测试</p>
+<p>1）具备基本的模块知识以及模块外部接口知识，并可在他人指导下完成工作；<br>2）具备模块相应的测试知识；<br>3）熟悉开发环境以及开发提交、评审流程；</p>
+
       
     </div>
 
@@ -1472,16 +1553,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
+              <time title="Erstellt: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 10:26:13" itemprop="dateModified" datetime="2020-08-25T10:26:13+08:00">2020-08-25</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-08-25 10:26:13" itemprop="dateModified" datetime="2020-08-25T10:26:13+08:00">2020-08-25</time>
               </span>
 
           
@@ -1536,9 +1617,9 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
+              <time title="Erstellt: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
             </span>
 
           
@@ -1617,16 +1698,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Publicado el</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="Creado por: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
+              <time title="Erstellt: 2020-07-12 17:34:19" itemprop="dateCreated datePublished" datetime="2020-07-12T17:34:19+08:00">2020-07-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Editado el</span>
-                <time title="Modificado por: 2020-08-25 09:55:08" itemprop="dateModified" datetime="2020-08-25T09:55:08+08:00">2020-08-25</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-08-25 09:55:08" itemprop="dateModified" datetime="2020-08-25T09:55:08+08:00">2020-08-25</time>
               </span>
 
           
@@ -1662,7 +1743,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Página siguiente"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
   </nav>
 
 
@@ -1706,10 +1787,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Tabla de contenidos
+          Inhaltsverzeichnis
         </li>
         <li class="sidebar-nav-overview">
-          Inicio
+          Übersicht
         </li>
       </ul>
 
@@ -1729,18 +1810,18 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">12</span>
-          <span class="site-state-item-name">entradas</span>
+          <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">categorías</span></a>
+        <span class="site-state-item-name">Kategorien</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">tags</span></a>
+        <span class="site-state-item-name">schlagwörter</span></a>
       </div>
   </nav>
 </div>
@@ -1783,7 +1864,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Cyame</span>
 </div>
-  <div class="powered-by">Creado mediante <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
         
