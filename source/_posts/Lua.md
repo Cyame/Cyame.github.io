@@ -1,4 +1,4 @@
-#Lua Grammar
+# Lua Grammar
 
 ## Data Type
 
